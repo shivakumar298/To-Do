@@ -42,10 +42,7 @@ console.log('hi',this.list)
 
   }
 
- ondelete(data){
-   
-   console.log('checkbox data',data.checkbx)
- }
+
 
 
 }
