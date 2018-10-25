@@ -1,0 +1,82 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"><h4><b>To Do</b></h4></li>
+  </ol>
+</nav>
+
+<div class="card container col-md-10" >
+  
+  <div class="card-body">
+    <h5 class="card-title">What's the agenda?</h5>
+    <hr>
+
+    <form class="text-center" #myForm="ngForm"  style="color: #757575;">
+
+            <div class="card-text form-row">
+                <div class="col">
+                    <!-- First name -->
+                    <div class="md-form" >
+                        <input type="text" mdbInputDirective  data-error=" "   id="materialRegisterFormFirstName" placeholder="Text Field" name="textfield" class="form-control" ngModel>
+                       
+                       
+                       
+                    </div>
+                </div>
+                 <div class="col">
+                    <!-- First name -->
+                    <div class="md-form" >
+                        <input type="date" mdbInputDirective  data-error=" "   id="materialRegisterFormFirstName" name="date" class="form-control" ngModel>
+                     
+                       
+                       
+                    </div>
+                </div>
+                  </div>
+                    <div class="card-text form-row">
+                         <button class="btn btn-info my-4 btn-block waves-effect z-depth-0 col-md-2 "  (click)="onSubmit(myForm.value)" type="submit">Save</button>
+                    </div>
+                </form>
+     </div>
+                  </div>
+                  <br>
+                   <br>
+      <div  class="card container col-md-10" >
+  
+  <div class="card-body">
+    <h5 class="card-title">Stuff to do</h5>
+  
+
+    <form class="text-center"#Form="ngForm"  >
+
+            <div class="card-text form-row">
+
+              <table class="table table-sm" >
+ 
+  
+
+    <tr *ngFor="let data of list; let i = index">
+     
+      <td scope="row">
+        <div class="form-check">
+         
+        <input type="checkbox" class="form-check-input" id="bx" name="checkbx" ngModel value={{i}}>
+       
+        </div>
+      </td>
+     
+      <td >{{data.textfield}}</td>
+        <td >{{data.date}}</td>
+     
+    </tr>
+ 
+    
+ 
+</table>
+
+             </div>
+             <div class="card-text form-row">
+                         <button class="btn btn-info my-4 btn-block waves-effect z-depth-0 col-md-2 "  (click)="ondelete(Form.value)" type="submit">Delete</button>
+                    </div>
+                </form>
+     </div>
+                  </div>
